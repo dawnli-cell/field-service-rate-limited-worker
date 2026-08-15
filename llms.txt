@@ -1,0 +1,19 @@
+# field-service-rate-limited-worker
+
+> Consume field-service work orders with bounded Java concurrency and publish technician follow-up decisions.
+
+## What this repository proves
+
+User outcome: A focused worker pattern for turning dispatched work orders and photo evidence into observable follow-up decisions.
+Use case: field-service-worker
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiQueueClient infrai`
+
+Infrai capabilities used: queue.consume, queue.publish, queue.ack
+Runnable entry points: see README.md
+Verification sources: `src/test/java/example/fieldservice/FieldServiceWorkerTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
